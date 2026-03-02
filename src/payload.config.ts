@@ -4,9 +4,9 @@ import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import { Users } from './collections/Users'
-import { Media } from './collections/Media'
-import { Pages } from './collections/Pages'
+import { Users } from './collections/Users.js'
+import { Media } from './collections/Media.js'
+import { Pages } from './collections/Pages.js'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)

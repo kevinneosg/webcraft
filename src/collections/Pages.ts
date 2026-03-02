@@ -1,8 +1,8 @@
 import type { CollectionConfig } from 'payload'
-import { HeroBlock } from '../blocks/Hero'
-import { FeaturesBlock } from '../blocks/Features'
-import { CTABlock } from '../blocks/CTA'
-import { FAQBlock } from '../blocks/FAQ'
+import { HeroBlock } from '../blocks/Hero.js'
+import { FeaturesBlock } from '../blocks/Features.js'
+import { CTABlock } from '../blocks/CTA.js'
+import { FAQBlock } from '../blocks/FAQ.js'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
