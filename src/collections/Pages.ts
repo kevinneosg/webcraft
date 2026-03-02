@@ -2,6 +2,7 @@ import type { CollectionConfig } from 'payload'
 import { HeroBlock } from '../blocks/Hero'
 import { FeaturesBlock } from '../blocks/Features'
 import { CTABlock } from '../blocks/CTA'
+import { FAQBlock } from '../blocks/FAQ'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -35,10 +36,12 @@ export const Pages: CollectionConfig = {
         HeroBlock,
         FeaturesBlock,
         CTABlock,
+        FAQBlock,
         // Add more blocks as we create them
       ],
     },
   ],
 }
+
 
 
