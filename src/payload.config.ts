@@ -1,0 +1,35 @@
+import { buildConfig } from 'payload'
+import { sqliteAdapter } from '@payloadcms/db-sqlite'
+import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import path from 'path'
+import { fileURLToPath } from 'url'
+import { Users } from './collections/Users'
+import { Media } from './collections/Media'
+import { Pages } from './collections/Pages'
+
+const filename = fileURLToPath(import.meta.url)
+const dirname = path.dirname(filename)
+
+export default buildConfig({
+  admin: {
+    user: Users.slug,
+    importMap: {
+      baseDir: path.resolve(dirname),
+    },
+  },
+  collections: [
+    Users,
+    Media,
+    Pages,
+  ],
+  editor: lexicalEditor({}),
+  secret: process.env.PAYLOAD_SECRET || 'b654e857-e165-4200-8800-47b8566a7b68',
+  db: sqliteAdapter({
+    client: {
+      url: process.env.DATABASE_URI || 'file:./payload.db',
+    },
+  }),
+  typescript: {
+    outputFile: path.resolve(dirname, 'payload-types.ts'),
+  },
+})
