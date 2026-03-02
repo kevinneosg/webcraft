@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "payload generate:importmap && next build",
+    "payload:importmap": "payload generate:importmap",
     "start": "next start",
     "lint": "next lint",
     "generate:types": "payload generate:types"

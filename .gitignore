@@ -16,6 +16,8 @@ node_modules/
 payload.db
 payload.db-journal
 media/
+src/payload-import-map.ts
+src/payload-types.ts
 
 # misc
 .DS_Store
