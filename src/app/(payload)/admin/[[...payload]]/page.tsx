@@ -1,4 +1,4 @@
-import { RootPage, generateMetadata } from '@payloadcms/next/views'
+import { RootPage, generatePageMetadata } from '@payloadcms/next/views'
 
 export default RootPage
-export { generateMetadata }
+export const generateMetadata = generatePageMetadata

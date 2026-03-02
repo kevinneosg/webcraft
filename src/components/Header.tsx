@@ -1,3 +1,5 @@
+'use client';
+
 import { Code2, Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
