@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../styles/index.css'
-import 'tw-animate-css/dist/tw-animate.css'
+import '../../styles/tw-animate.css'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
