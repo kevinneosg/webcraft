@@ -1,8 +1,8 @@
 import React from 'react'
-import { Hero } from './Hero.js'
-import { Features } from './Features.js'
-import { CTA } from './CTA.js'
-import { FAQ } from './FAQ.js'
+import { Hero } from './Hero'
+import { Features } from './Features'
+import { CTA } from './CTA'
+import { FAQ } from './FAQ'
 // Import other components as blocks are added
 
 const blocksMap: Record<string, any> = {

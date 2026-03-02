@@ -1,6 +1,6 @@
 import { RootLayout } from '@payloadcms/next/layouts'
-import { importMap } from '@/payload-import-map.js'
-import config from '../../../../payload.config.js'
+import { importMap } from '../importMap'
+import config from '../../../../payload.config'
 import './custom.css'
 
 type Props = {

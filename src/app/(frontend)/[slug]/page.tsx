@@ -1,10 +1,10 @@
 import { getPayload } from 'payload'
-import config from '@/payload.config.js'
-import { Blocks } from '@/components/Blocks.js'
+import config from '@/payload.config'
+import { Blocks } from '@/components/Blocks'
 import { notFound } from 'next/navigation'
 import React from 'react'
-import { Header } from '@/components/Header.js'
-import { Footer } from '@/components/Footer.js'
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
 
 interface PageProps {
   params: Promise<{
