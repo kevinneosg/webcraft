@@ -26,7 +26,7 @@ export default buildConfig({
   secret: process.env.PAYLOAD_SECRET || 'b654e857-e165-4200-8800-47b8566a7b68',
   db: sqliteAdapter({
     client: {
-      url: process.env.DATABASE_URI || 'file:./payload.db',
+      url: process.env.DATABASE_URL || process.env.DATABASE_URI || 'file:./payload.db',
     },
   }),
   typescript: {
