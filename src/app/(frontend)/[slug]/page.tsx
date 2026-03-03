@@ -6,6 +6,9 @@ import React from 'react'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
+// Enable dynamic rendering for CMS content
+export const dynamic = 'force-dynamic'
+
 interface PageProps {
   params: Promise<{
     slug: string
@@ -43,13 +46,19 @@ export default async function Page({ params }: PageProps) {
 }
 
 export async function generateStaticParams() {
-  const payload = await getPayload({ config })
-  const pages = await payload.find({
-    collection: 'pages',
-    limit: 0,
-  })
+  try {
+    const payload = await getPayload({ config })
+    const pages = await payload.find({
+      collection: 'pages',
+      limit: 0,
+    })
 
-  return pages.docs.map((doc) => ({
-    slug: doc.slug,
-  }))
+    return pages.docs.map((doc) => ({
+      slug: doc.slug,
+    }))
+  } catch (error) {
+    // Database tables may not exist yet during initial build
+    console.warn('Unable to generate static params, returning empty array:', error)
+    return []
+  }
 }
