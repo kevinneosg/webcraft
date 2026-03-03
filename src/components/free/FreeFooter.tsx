@@ -1,5 +1,4 @@
 import { Code2, Mail, Phone, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
-import { Link } from 'react-router';
 
 export function FreeFooter() {
   return (

@@ -1,6 +1,6 @@
 import { Code2, Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'react-router';
+import Link from 'next/link';
 
 export function FreeHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,7 +25,7 @@ export function FreeHeader() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center gap-2 group">
             <Code2 className="w-8 h-8 text-emerald-600 group-hover:text-emerald-700 transition-colors" />
             <div className="flex flex-col">
               <span className="font-bold text-gray-900 text-lg leading-tight">
@@ -101,7 +101,7 @@ export function FreeHeader() {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-4">
             <Link
-              to="/"
+              href="/"
               className="px-6 py-2.5 text-emerald-600 font-semibold hover:text-emerald-700 transition-colors"
             >
               Premium Plan
@@ -189,7 +189,7 @@ export function FreeHeader() {
               </a>
               <div className="border-t border-gray-200 mt-2 pt-2">
                 <Link
-                  to="/"
+                  href="/"
                   className="block px-4 py-3 text-emerald-600 hover:bg-emerald-50 font-semibold rounded-lg transition-colors"
                 >
                   Premium Plan
